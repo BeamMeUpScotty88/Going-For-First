@@ -7,6 +7,7 @@
     font-family:'Playfair Display', 'Raleway';
     color:whitesmoke;
 }
+/* Page Colours */
 #homepage {
     background:linear-gradient(#EAA303 40%,#1E142E 80%);
     background-size: cover;
@@ -22,16 +23,11 @@
     background-repeat: no-repeat;
     flex-grow:1;
 }
+/* Universal Page format*/
 header {
     position:fixed;
     width:100vw;
     z-index:100;
-}
-#heading {
-    background-repeat:no-repeat;
-    background-size: cover;
-    height: 80vh;
-    clip-path:ellipse(99% 100% at top);
 }
 .logo-pic {
     width:7%;
@@ -41,20 +37,11 @@ header {
     margin:0;
     padding:0;
 }
-#top-nav {
-    font-size: 1.25rem;
-    margin:0 20rem;
-    display:flex;
-    position:sticky;
-    top:0;
-}
-#bottom-nav {
-    display:flex;
-    justify-content:center;
-    font-size: 1.1rem;
-    margin:10rem 20rem 2rem 20rem;
-    padding:3rem;
-    overflow: hidden;
+#heading {
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 80vh;
+    clip-path:ellipse(99% 100% at top);
 }
 h1 {
     text-align: center;
@@ -77,6 +64,7 @@ h4 {
 }
 p {
     padding:0 3rem;
+    text-shadow: 0 0 10px black;
 }
 .title-subheading {
     text-align: center;
@@ -85,7 +73,25 @@ p {
     font-size: 1.25rem;
     color:whitesmoke;
 }
-#article {
+hr {
+    margin:4rem;
+    border:1px solid hsl(0, 0%, 75%, 40%);
+}
+.heading-link {
+    font-size: 0.6rem;
+    font-style: italic;
+    padding-top:1rem;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+}
+figcaption {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+/* Homepage and column types */
+
+#article-list {
     display:grid;
     grid-template-columns: 1fr minmax(150px,1fr); 
     align-items: center;
@@ -94,6 +100,65 @@ p {
 .col-two, .col-one{
    text-align: center;
    padding:1rem 4rem;
+}
+.col-two {
+    align-items: center;
+    position:relative;
+    margin:1rem;
+}
+.col-two-text {
+    position:absolute;
+    left:0;
+    right:0;
+    top:30%;
+    margin-inline:auto;
+    width:fit-content;
+}
+.col-two-image img {
+    height:30%;
+    width:100%;
+    border-radius: 20%/60%;
+    object-fit:cover;
+    overflow: hidden;
+    filter:brightness(60%);
+}
+.col-two:hover {
+    filter:brightness(150%);
+}
+.full-span, hr {
+    grid-column:1 /3;
+    text-align: center;
+}
+
+/* Stories Formatting */
+#article-stories {
+    align-items: center;
+    padding-top:1rem;
+}
+.stories-video {
+    width:60%;
+    height:60%;
+    object-fit:cover;
+}
+.stories-text {
+    padding:2rem 20rem;
+}
+
+/* Navigation */
+#top-nav {
+    font-size: 1.25rem;
+    margin:0 20rem;
+    display:flex;
+    position:sticky;
+    top:0;
+}
+#bottom-nav {
+    display:flex;
+    justify-content:center;
+    font-size: 1.1rem;
+    margin:4rem 20rem 2rem 20rem;
+    padding:3rem;
+    overflow: hidden;
 }
 a {
     text-decoration: none;
@@ -126,30 +191,6 @@ footer a:active, header a:active {
     text-decoration-color:#EAA303;
     text-shadow: 0 0 10px #EAA303;   
 }
-.col-two {
-    align-items: center;
-    position:relative;
-    margin:1rem;
-}
-.col-two-text {
-    position:absolute;
-    left:0;
-    right:0;
-    top:30%;
-    margin-inline:auto;
-    width:fit-content;
-}
-.col-two-image img {
-    height:30%;
-    width:100%;
-    border-radius: 20%/60%;
-    object-fit:cover;
-    overflow: hidden;
-    filter:brightness(60%);
-}
-.col-two:hover {
-    filter:brightness(150%);
-}
 .youtube-logo {
     color:red;
     font-weight: bold;
@@ -164,21 +205,4 @@ footer a:active, header a:active {
     text-decoration-color:red;
     text-shadow: 0 0 10px red;   
 }
-.full-span, hr {
-    grid-column:1 /3;
-    text-align: center;
-}
-iframe {
-    object-fit:cover;
-}
-hr {
-    margin:4rem;
-    border:1px solid hsl(0, 0%, 75%, 40%);
-}
-.heading-link {
-    font-size: 0.6rem;
-    font-style: italic;
-    padding-top:1rem;
-    text-align: center;
-    text-shadow: 0 0 10px black;
-}
+
