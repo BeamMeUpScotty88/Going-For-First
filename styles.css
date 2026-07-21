@@ -134,6 +134,7 @@ figcaption {
 #article-stories {
     align-items: center;
     padding-top:1rem;
+    text-align: center;
 }
 .stories-video {
     width:60%;
