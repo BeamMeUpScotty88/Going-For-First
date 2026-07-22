@@ -227,3 +227,9 @@ footer a:active, header a:active {
 .oversized {
     font-size: 1.8rem;
 }
+.white-back {
+    background-color: white;
+}
+.white-back h3 {
+    color:black;
+}
